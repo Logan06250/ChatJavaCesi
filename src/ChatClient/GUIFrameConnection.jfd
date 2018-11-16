@@ -1,0 +1,35 @@
+JFDML JFormDesigner: "6.0.4.1.172" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq t {space :p:32:p, par l {comp label1:::::x, seq l {comp label2:::p:61:p, space :0:0:x}}, space :::p, par l {comp textField1:::p:169:p, comp textField2:::p:169:p}, space :p:15:p}, seq l {space :::p, comp button1:::::x, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :::p, par b {comp label1::b:p::p, comp textField1::b:p::p}, space u:::p, par b {comp label2::b:p::p, comp textField2::b:p::p}, space ::9:x, comp button1:::p::p, space :::p}}"
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField1"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField2"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "Pseudo :"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "Serveur :"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "Connection"
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "button1MouseClicked", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 45, 0 )
+			"size": new java.awt.Dimension( 285, 155 )
+		} )
+	}
+}
